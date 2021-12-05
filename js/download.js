@@ -42,7 +42,7 @@ function CreateCanvasWithImageAndQuote() {
   let ctx = canvas.getContext("2d");
 
 
-  const myFont = new FontFace('Fearlessley', 'url(../assets/fonts/Fearlessly-Regular.woff2)');
+  const myFont = new FontFace('Fearlessley', 'url(./assets/fonts/Fearlessly-Regular.woff2)');
 
   myFont.load().then((font) => {
     document.fonts.add(font);
