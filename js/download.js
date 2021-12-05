@@ -94,24 +94,24 @@ function drawImageAndQuoteInsideCanvas(img, ctx) {
   ctx.shadowColor = "black";
   ctx.shadowBlur = 17;
   let lineheight = 50;
-  ctx.font = "170px Fearlessly";
+  ctx.font = "170px Fearlessley";
   ctx.lineWidth = 7;
   let offset = 750;
 
   if (window.screen.width >= 1024) {
-    ctx.font = "60px Fearlessly";
+    ctx.font = "60px Fearlessley";
     lineheight = 60;
     ctx.shadowBlur = 5;
     ctx.lineWidth = 7;
     offset = 250;
   } else if (window.screen.width >= 768) {
-    ctx.font = "100px Fearlessly";
+    ctx.font = "100px Fearlessley";
     lineheight = 100;
     ctx.shadowBlur = 5;
     ctx.lineWidth = 7;
     offset = 350;
   } else {
-    ctx.font = "170px Fearlessly";
+    ctx.font = "170px Fearlessley";
     lineheight = 150;
     ctx.lineWidth = 7;
     offset = 750;
