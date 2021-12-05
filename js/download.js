@@ -48,6 +48,7 @@ function CreateCanvasWithImageAndQuote() {
     document.fonts.add(font);
     console.log(myFont);
     console.log('Font loaded');
+    ctx.font = "60px Fearlessley";
   });
 
   img.onload = ()=>drawImageAndQuoteInsideCanvas(img, ctx);
