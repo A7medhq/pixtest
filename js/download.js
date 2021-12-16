@@ -40,6 +40,17 @@ function CreateCanvasWithImageAndQuote() {
   document.body.prepend(newcanvas);
   let canvas = document.getElementById("canvas");
   let ctx = canvas.getContext("2d");
+
+
+  const myFont = new FontFace('Fearlessley', 'url(assets/fonts/Fearlessly-Regular.woff2)');
+
+  myFont.load().then((font) => {
+    document.fonts.add(font);
+    console.log(myFont);
+    console.log('Font loaded');
+    ctx.font = "60px Fearlessley";
+  });
+
   img.onload = ()=>drawImageAndQuoteInsideCanvas(img, ctx);
 }
 
@@ -84,24 +95,24 @@ function drawImageAndQuoteInsideCanvas(img, ctx) {
   ctx.shadowColor = "black";
   ctx.shadowBlur = 17;
   let lineheight = 50;
-  ctx.font = "170px";
+  ctx.font = "170px Fearlessley";
   ctx.lineWidth = 7;
   let offset = 750;
 
   if (window.screen.width >= 1024) {
-    ctx.font = "60px";
+    ctx.font = "60px Fearlessley";
     lineheight = 60;
     ctx.shadowBlur = 5;
     ctx.lineWidth = 7;
     offset = 250;
   } else if (window.screen.width >= 768) {
-    ctx.font = "100px";
+    ctx.font = "100px Fearlessley";
     lineheight = 100;
     ctx.shadowBlur = 5;
     ctx.lineWidth = 7;
     offset = 350;
   } else {
-    ctx.font = "170px";
+    ctx.font = "170px Fearlessley";
     lineheight = 150;
     ctx.lineWidth = 7;
     offset = 750;
